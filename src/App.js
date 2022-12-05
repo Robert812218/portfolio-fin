@@ -5,22 +5,21 @@ import Languages from './components/Languages';
 import Projects from './components/Projects';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer'; 
+import Blog from './components/Blog';
 
+// ADD A BLOG PAGE 
+	// ADD BLOGS ABOUT LINUX AND WHATNOT
+// ADD LINK TO GITHUB 
 
-// home
-// about me
-// projects
-// blog
-// contact
-// github
-// resume (?)
 
 
 export default function App() {
+	const [active, setActive] = useState("");
 	const [profile, setProfile] = useState("");
 	const [languages, setLanguages] = useState("");
 	const [projects, setProjects] = useState("");
 	const [contactPage, setContactPage] = useState("");
+	const [blog, setBlog] = useState("");
 	const [contactForm, setContactForm] = useState("");
 
 	function checkStates() {
@@ -31,6 +30,7 @@ export default function App() {
 		setLanguages("");
 		setProjects("");
 		setContactForm("");
+		setBlog("");
 	}	
 
 	function renderLanguages() {
@@ -38,6 +38,7 @@ export default function App() {
 		setLanguages(!languages);
 		setProjects("");
 		setContactForm("");
+		setBlog("");
 	}
 
 	function renderProjects() {
@@ -45,6 +46,7 @@ export default function App() {
 		setLanguages("");
 		setProjects(!projects);
 		setContactForm("");
+		setBlog("");
 	}
 
 	function renderContactForm() {
@@ -52,8 +54,22 @@ export default function App() {
 		setLanguages("");
 		setProjects("");
 		setContactForm(contactForm);
+		setBlog("");
 	}
 	
+
+	function renderBlog() {
+		setProfile("");
+		setLanguages("");
+		setProjects("");
+		setContactForm("");
+		setBlog(!blog);
+	}
+
+	function renderActive() {
+		setActive(!active);
+	}
+
 	return (
     		<div>
 			<h1>PORTFOLIONI</h1>
@@ -61,9 +77,13 @@ export default function App() {
 			<button onClick={renderProfile}>About Me</button>
 			<button onClick={renderLanguages}>Languages</button>
 			<button onClick={renderProjects}>Projects</button>
+			<button onClick={renderBlog}>Blog</button>
 			<button onClick={setContactForm}>Get In Touch</button>	
 
- 			<div class="render-area">
+			
+
+ 			<div class="render-area display flex-row">
+				
 				{profile && 
 				<div>
 					<Profile />
@@ -77,6 +97,11 @@ export default function App() {
 				{projects &&
 				<div>
 					<Projects />
+				</div>
+				}
+				{blog &&
+				<div>
+					<Blog />
 				</div>
 				}
 				{contactForm && 

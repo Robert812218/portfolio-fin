@@ -7,6 +7,9 @@ import RubyDesc from './languageDescriptions/RubyDesc';
 import PythonDesc from './languageDescriptions/PythonDesc';
 import RustDesc from './languageDescriptions/RustDesc';
 import SQLDesc from './languageDescriptions/SQLDesc';
+import VimDesc from './languageDescriptions/VimDesc';
+import LinuxDesc from './languageDescriptions/LinuxDesc';
+
 
 export default function Languages() {
 	const [clojure, setClojure] = useState("");		
@@ -17,35 +20,171 @@ export default function Languages() {
 	const [python, setPython] = useState("");		
 	const [rust, setRust] = useState("");		
 	const [sql, setSQL] = useState("");
-	
+	const [vim, setVim] = useState("");
+	const [linux, setLinux] = useState("");
+
+
+
+	function renderClojure() {
+		setClojure(!clojure);
+		setElixir("");
+		setCSharp("");
+		setJavascript("");
+		setRuby("");
+		setPython("");
+		setRust("");
+		setSQL("");
+		setVim("");
+		setLinux("");
+	}	
+
+	function renderElixir() {
+		setClojure("");
+		setElixir(!elixir);
+		setCSharp("");
+		setJavascript("");
+		setRuby("");
+		setPython("");
+		setRust("");
+		setSQL("");
+		setVim("");
+		setLinux("");
+	}	
+	function renderCSharp() {
+		setClojure("");
+		setElixir("");
+		setCSharp(!cSharp);
+		setJavascript("");
+		setRuby("");
+		setPython("");
+		setRust("");
+		setSQL("");
+		setVim("");
+		setLinux("");
+	}	
+
+	function renderJavascript() {
+		setClojure("");
+		setElixir("");
+		setCSharp("");
+		setJavascript(!javascript);
+		setRuby("");
+		setPython("");
+		setRust("");
+		setSQL("");
+		setVim("");
+		setLinux("");
+	}	
+
+	function renderRuby() {
+		setClojure("");
+		setElixir("");
+		setCSharp("");
+		setJavascript("");
+		setRuby(!ruby);
+		setPython("");
+		setRust("");
+		setSQL("");
+		setVim("");
+		setLinux("");
+	}	
+
+
+	function renderPython() {
+		setClojure("");
+		setElixir("");
+		setCSharp("");
+		setJavascript("");
+		setRuby("");
+		setPython(!python);
+		setRust("");
+		setSQL("");
+		setVim("");
+		setLinux("");
+	}	
+
+	function renderRust() {
+		setClojure("");
+		setElixir("");
+		setCSharp("");
+		setJavascript("");
+		setRuby("");
+		setPython("");
+		setRust(!rust);
+		setSQL("");
+		setVim("");
+		setLinux("");
+	}	
+
+	function renderSQL() {
+		setClojure("");
+		setElixir("");
+		setCSharp("");
+		setJavascript("");
+		setRuby("");
+		setPython("");
+		setRust("");
+		setSQL(!sql);
+		setVim("");
+		setLinux("");
+	}	
+
+	function renderVim() {
+		setClojure("");
+		setElixir("");
+		setCSharp("");
+		setJavascript("");
+		setRuby("");
+		setPython("");
+		setRust("");
+		setSQL("");
+		setVim(!vim);
+		setLinux("");
+	}	
+
+	function renderLinux() {
+		setClojure("");
+		setElixir("");
+		setCSharp("");
+		setJavascript("");
+		setRuby("");
+		setPython("");
+		setRust("");
+		setSQL("");
+		setVim("");
+		setLinux(!linux);
+	}	
 
 	return (
 		// Make this flex-column - buttons on left, descriptions on right
 		<div>
 			<ul>
 				<li>Javascript/React.js
-					<button>+</button>
+					<button onClick={renderClojure}>+</button>
 				</li>
 				<li>Rust/WebAssembly
-					<button>+</button>
+					<button onClick={renderRust}>+</button>
 				</li>
 				<li>Elixir/Phoenix
-					<button>+</button>
+					<button onClick={renderElixir}>+</button>
 				</li>
 				<li>ClojureScript/Reagent
-					<button>+</button>
+					<button onClick={renderClojure}>+</button>
 				</li>
 				<li>Python/Django
-					<button>+</button>
+					<button onClick={renderPython}>+</button>
 				</li>
 				<li>Ruby/Rails
-					<button>+</button>
+					<button onClick={renderRuby}>+</button>
 				</li>
 				<li>C#
-					<button>+</button>
+					<button onClick={renderCSharp}>+</button>
 				</li>
 				<li>SQL/Postgres
-					<button>+</button>
+					<button onClick={renderSQL}>+</button>
+				</li>
+				<li>Vim
+					<button onClick={renderVim}>+</button>
 				</li>
 				
 			</ul>
@@ -60,6 +199,8 @@ export default function Languages() {
 				{python && <PythonDesc />}
 				{rust && <RustDesc />}
 				{sql && <SQLDesc />}
+				{vim && <VimDesc />}
+				{linux && <LinuxDesc />}
 			</div>
 		</div>
 	);
