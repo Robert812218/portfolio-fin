@@ -1,25 +1,38 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import Route from './components/Route';
-import Header from './components/Header';
+import Profile from './components/Profile';
+import Languages from './components/Languages';
+import Projects from './components/Projects';
 
-function MainMenu() {
+
+export default function App() {
+	const [view, setView] = useState("");
+
+
+	
+	function renderProfile() {
+		setProjects = true;
+	}
+
 	return (
-		<div className="PageChoiceContainer">
-			<button className="PageChoiceButton">Home</button>
-			<button className="PageChoiceButton">Page</button>
-		</div>
-	);
+    		<div>
+			<h1>PORTFOLIONI</h1>
+
+			<button onClick={renderProfile}>About Me</button>
+			<button>Languages</button>
+			<button>Projects</button>
+			<button></button>
+
+
+			<div>
+				{active === "profile" && 
+				<div>
+					<Profile />
+				</div>}
+				{langs && <Languages />}
+				{projects && <Projects />}
+			</div>
+    		</div>
+  	);
 }
 
-
-function App() {
-  return (
-    <div className="App">
-	<h1>NEWEST PORTFOLIO</h1>
-	<header>ROBERT KELLY</header>
-    </div>
-  );
-}
-
-export default App;
