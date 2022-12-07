@@ -16,7 +16,8 @@ import Blog from './components/Blog';
 // PROLOG AND/OR GO?
 // ADD COMMAND LINE/HTML/CSS (incl.SCSS, Tailwind) SKILLS
 // ADD RUST PROJECT
-
+// DO SOME FLUTTER/DART PROJECTS
+// ADD VIRTUAL MACHINES/KALI LINUX MAYBE
 
 export default function App() {
 	const [active, setActive] = useState("");
@@ -26,6 +27,10 @@ export default function App() {
 	const [contactPage, setContactPage] = useState("");
 	const [blog, setBlog] = useState("");
 	const [contactForm, setContactForm] = useState("");
+
+	useEffect(() => {
+		setProjects(!projects);
+	}, []);
 
 	function checkStates() {
 	}
@@ -78,17 +83,16 @@ export default function App() {
 	return (
     		<div>
 			<h1>PORTFOLIONI</h1>
-
-			<button onClick={renderProfile}>About Me</button>
-			<button onClick={renderLanguages}>Languages</button>
-			<button onClick={renderProjects}>Projects</button>
-			<button onClick={renderBlog}>Blog</button>
-			<button onClick={setContactForm}>Get In Touch</button>	
-
+			<div className="section-buttons">
+				<button onClick={renderProfile}>About Me</button>
+				<button onClick={renderLanguages}>Languages, Frameworks, and Technologies</button>
+				<button onClick={renderProjects}>Projects</button>
+				<button onClick={renderBlog}>Blog</button>
+				<button onClick={setContactForm}>Get In Touch</button>	
+			</div>
 			
 
- 			<div class="render-area display flex-row">
-				
+ 			<div className="render-area">
 				{profile && 
 				<div>
 					<Profile />

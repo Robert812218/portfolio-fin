@@ -9,6 +9,7 @@ import RustDesc from './languageDescriptions/RustDesc';
 import SQLDesc from './languageDescriptions/SQLDesc';
 import VimDesc from './languageDescriptions/VimDesc';
 import LinuxDesc from './languageDescriptions/LinuxDesc';
+import GitDesc from './languageDescriptions/GitDesc';
 
 
 export default function Languages() {
@@ -22,6 +23,7 @@ export default function Languages() {
 	const [sql, setSQL] = useState("");
 	const [vim, setVim] = useState("");
 	const [linux, setLinux] = useState("");
+	const [git, setGit] = useState("");
 
 
 
@@ -36,6 +38,7 @@ export default function Languages() {
 		setSQL("");
 		setVim("");
 		setLinux("");
+		setGit("");
 	}	
 
 	function renderElixir() {
@@ -49,6 +52,8 @@ export default function Languages() {
 		setSQL("");
 		setVim("");
 		setLinux("");
+
+		setGit("");
 	}	
 	function renderCSharp() {
 		setClojure("");
@@ -61,6 +66,8 @@ export default function Languages() {
 		setSQL("");
 		setVim("");
 		setLinux("");
+
+		setGit("");
 	}	
 
 	function renderJavascript() {
@@ -74,6 +81,8 @@ export default function Languages() {
 		setSQL("");
 		setVim("");
 		setLinux("");
+
+		setGit("");
 	}	
 
 	function renderRuby() {
@@ -87,6 +96,8 @@ export default function Languages() {
 		setSQL("");
 		setVim("");
 		setLinux("");
+
+		setGit("");
 	}	
 
 
@@ -101,6 +112,8 @@ export default function Languages() {
 		setSQL("");
 		setVim("");
 		setLinux("");
+
+		setGit("");
 	}	
 
 	function renderRust() {
@@ -114,6 +127,8 @@ export default function Languages() {
 		setSQL("");
 		setVim("");
 		setLinux("");
+
+		setGit("");
 	}	
 
 	function renderSQL() {
@@ -127,6 +142,8 @@ export default function Languages() {
 		setSQL(!sql);
 		setVim("");
 		setLinux("");
+
+		setGit("");
 	}	
 
 	function renderVim() {
@@ -140,6 +157,8 @@ export default function Languages() {
 		setSQL("");
 		setVim(!vim);
 		setLinux("");
+
+		setGit("");
 	}	
 
 	function renderLinux() {
@@ -153,6 +172,22 @@ export default function Languages() {
 		setSQL("");
 		setVim("");
 		setLinux(!linux);
+
+		setGit("");
+	}	
+
+	function renderGit() {
+		setClojure("");
+		setElixir("");
+		setCSharp("");
+		setJavascript("");
+		setRuby("");
+		setPython("");
+		setRust("");
+		setSQL("");
+		setVim("");
+		setLinux("");
+		setGit(!git);
 	}	
 
 	return (
@@ -186,6 +221,9 @@ export default function Languages() {
 				<li>Vim
 					<button onClick={renderVim}>+</button>
 				</li>
+				<li>Git/Github
+					<button onClick={renderGit}>+</button>
+				</li>
 				
 			</ul>
 			{/* Render Area */}
@@ -201,6 +239,7 @@ export default function Languages() {
 				{sql && <SQLDesc />}
 				{vim && <VimDesc />}
 				{linux && <LinuxDesc />}
+				{git && <GitDesc />}
 			</div>
 		</div>
 	);
