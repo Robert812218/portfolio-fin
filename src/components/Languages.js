@@ -25,8 +25,8 @@ export default function Languages() {
 	const [linux, setLinux] = useState("");
 	const [git, setGit] = useState("");
 
-
-
+		
+	
 	function renderClojure() {
 		setClojure(!clojure);
 		setElixir("");

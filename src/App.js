@@ -4,7 +4,6 @@ import Profile from './components/Profile';
 import Languages from './components/Languages';
 import Projects from './components/Projects';
 import ContactForm from './components/ContactForm';
-import Footer from './components/Footer'; 
 import Blog from './components/Blog';
 
 // ADD A BLOG PAGE 
@@ -29,7 +28,7 @@ export default function App() {
 	const [contactForm, setContactForm] = useState("");
 
 	useEffect(() => {
-		setProjects(!projects);
+		setContactForm(!contactForm);
 	}, []);
 
 	function checkStates() {
@@ -120,7 +119,6 @@ export default function App() {
 				
 			</div>
 
-			<Footer />
     		</div>
   	);
 }
