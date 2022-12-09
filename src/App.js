@@ -18,6 +18,7 @@ import Blog from './components/Blog';
 // DO SOME FLUTTER/DART PROJECTS
 // ADD VIRTUAL MACHINES/KALI LINUX MAYBE
 
+
 export default function App() {
 	const [active, setActive] = useState("");
 	const [profile, setProfile] = useState("");
@@ -28,7 +29,7 @@ export default function App() {
 	const [contactForm, setContactForm] = useState("");
 
 	useEffect(() => {
-		setContactForm(!contactForm);
+		setProjects(!projects);
 	}, []);
 
 	function checkStates() {
@@ -81,15 +82,35 @@ export default function App() {
 
 	return (
     		<div>
-			<h1>PORTFOLIONI</h1>
-			<div className="section-buttons">
-				<button onClick={renderProfile}>About Me</button>
-				<button onClick={renderLanguages}>Languages, Frameworks, and Technologies</button>
-				<button onClick={renderProjects}>Projects</button>
-				<button onClick={renderBlog}>Blog</button>
-				<button onClick={setContactForm}>Get In Touch</button>	
+			<div>
+
+
+				<nav class="bg-white shadow dark:bg-gray-800">
+    					<div class="container flex items-center justify-center p-6 mx-auto text-gray-600 capitalize dark:text-gray-300">
+				
+						<h1>ROBERT KELLY</h1>
+
+        					<button onClick={renderProfile} class="text-gray-800 transition-colors duration-300 transform dark:text-gray-200 border-b-2 border-blue-500 mx-1.5 sm:mx-6">About Me</button>
+
+       						<button onClick={renderLanguages} class="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-300 transform dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6">Languages, Frameworks, and Technologies</button>
+
+        					<button onClick={renderProjects} class="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-300 transform dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6">Projects</button>
+
+        					<button onClick={renderBlog} class="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-300 transform dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6">Blog</button>
+
+        					<button onClick={renderContactForm} class="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-300 transform dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6">Get in touch</button>
+
+    					</div>
+				</nav>
+
+			
+
+
 			</div>
 			
+				
+
+	
 
  			<div className="render-area">
 				{profile && 
