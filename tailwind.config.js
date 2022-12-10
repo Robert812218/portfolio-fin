@@ -1,15 +1,23 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./src/**/*.{js, jsx}"],
+module.exports = { 
+  content: require('fast-glob').sync([
+    'source/**/*.{blade.php,md,html,vue}',
+    '!source/**/_tmp/*' // exclude temporary files
+  ],{ dot: true }), 
+  
   theme: {
     extend: {
-	keyframes: {
-	        wiggle: {
-          		'0%, 100%': { transform: 'rotate(-3deg)' },
-          		'50%': { transform: 'rotate(3deg)' },
-        	}
-	}
-    },
-  },
-  plugins: [],
-}
+      fontFamily: {
+        roboto: ["Roboto", "sans-serif"],
+        cairo: ["Cairo"],
+      },  
+      spacing: {
+        128: "32rem",
+      },  
+    },  
+  },  
+
+
+  /** plugins: [require("@tailwindcss/forms")], */
+};
+

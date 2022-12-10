@@ -18,8 +18,17 @@ import Blog from './components/Blog';
 // DO SOME FLUTTER/DART PROJECTS
 // ADD VIRTUAL MACHINES/KALI LINUX MAYBE
 
+function App() {
+	return (
+		<body class="overflow-hidden">
+			<div x-data="{ sidebarOpen: false }" class="relative flex h-screen text-gray-800 bg-white font-roboto">
+			</div>
+		</body>
+	);
+}
 
-export default function App() {
+
+export default function AppOld() {
 	const [active, setActive] = useState("");
 	const [profile, setProfile] = useState("");
 	const [languages, setLanguages] = useState("");
@@ -83,7 +92,6 @@ export default function App() {
 	return (
     		<div>
 			<div>
-
 
 				<nav class="bg-white shadow dark:bg-gray-800">
     					<div class="container flex items-center justify-center p-6 mx-auto text-gray-600 capitalize dark:text-gray-300">
