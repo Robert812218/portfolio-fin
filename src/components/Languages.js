@@ -10,7 +10,7 @@ import SQLDesc from './languageDescriptions/SQLDesc';
 import VimDesc from './languageDescriptions/VimDesc';
 import LinuxDesc from './languageDescriptions/LinuxDesc';
 import GitDesc from './languageDescriptions/GitDesc';
-
+import Button from '@mui/material/Button';
 
 export default function Languages() {
 	const [clojure, setClojure] = useState("");		
@@ -191,38 +191,38 @@ export default function Languages() {
 	}	
 
 	return (
-		// Make this flex-column - buttons on left, descriptions on right
+		// Make this flex-column - Buttons on left, descriptions on right
 		<div>
 			<ul>
 				<li>Javascript/React.js
-					<button onClick={renderClojure}>+</button>
+					<Button variant="contained" onClick={renderClojure}>+</Button>
 				</li>
 				<li>Rust/WebAssembly
-					<button onClick={renderRust}>+</button>
+					<Button variant="contained" onClick={renderRust}>+</Button>
 				</li>
 				<li>Elixir/Phoenix
-					<button onClick={renderElixir}>+</button>
+					<Button variant="contained" onClick={renderElixir}>+</Button>
 				</li>
 				<li>ClojureScript/Reagent
-					<button onClick={renderClojure}>+</button>
+					<Button variant="contained" onClick={renderClojure}>+</Button>
 				</li>
 				<li>Python/Django
-					<button onClick={renderPython}>+</button>
+					<Button variant="contained" onClick={renderPython}>+</Button>
 				</li>
 				<li>Ruby/Rails
-					<button onClick={renderRuby}>+</button>
+					<Button variant="contained" onClick={renderRuby}>+</Button>
 				</li>
 				<li>C#
-					<button onClick={renderCSharp}>+</button>
+					<Button variant="contained" onClick={renderCSharp}>+</Button>
 				</li>
 				<li>SQL/Postgres
-					<button onClick={renderSQL}>+</button>
+					<Button variant="contained" onClick={renderSQL}>+</Button>
 				</li>
 				<li>Vim
-					<button onClick={renderVim}>+</button>
+					<Button variant="contained" onClick={renderVim}>+</Button>
 				</li>
 				<li>Git/Github
-					<button onClick={renderGit}>+</button>
+					<Button variant="contained" onClick={renderGit}>+</Button>
 				</li>
 				
 			</ul>

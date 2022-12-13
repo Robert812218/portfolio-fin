@@ -6,11 +6,150 @@ import Memorizo from './githubProjects/Memorizo';
 import Tinyapp from './githubProjects/Tinyapp';
 import SnekMultiplayer from './githubProjects/SnekMultiplayer';
 import AdventOfCode2022 from './githubProjects/AdventOfCode2022';
+// MUI components
+import AppBar from '@mui/material/AppBar';
+import Button from '@mui/material/Button';
+import CameraIcon from '@mui/icons-material/PhotoCamera';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import CssBaseline from '@mui/material/CssBaseline';
+import Grid from '@mui/material/Grid';
+import Stack from '@mui/material/Stack';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import Link from '@mui/material/Link';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+function Copyright() {
+    return (
+      <Typography variant="body2" color="text.secondary" align="center">
+        {'Copyright © '}
+        <Link color="inherit" href="https://mui.com/">
+          Your Website
+        </Link>{' '}
+        {new Date().getFullYear()}
+        {'.'}
+      </Typography>
+    );
+  }
+
+const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+const theme = createTheme();
+
+export default function Album() {
+  return (
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <AppBar position="relative">
+        <Toolbar>
+          <CameraIcon sx={{ mr: 2 }} />
+          <Typography variant="h6" color="inherit" noWrap>
+            Album layout
+          </Typography>
+        </Toolbar>
+      </AppBar>
+      <main>
+        {/* Hero unit */}
+        <Box
+          sx={{
+            bgcolor: 'background.paper',
+            pt: 8,
+            pb: 6,
+          }}
+        >
+          <Container maxWidth="sm">
+            <Typography
+              component="h1"
+              variant="h2"
+              align="center"
+              color="text.primary"
+              gutterBottom
+            >
+              Album layout
+            </Typography>
+            <Typography variant="h5" align="center" color="text.secondary" paragraph>
+              Something short and leading about the collection below—its contents,
+              the creator, etc. Make it short and sweet, but not too short so folks
+              don&apos;t simply skip over it entirely.
+            </Typography>
+            <Stack
+              sx={{ pt: 4 }}
+              direction="row"
+              spacing={2}
+              justifyContent="center"
+            >
+              <Button variant="contained">Main call to action</Button>
+              <Button variant="outlined">Secondary action</Button>
+            </Stack>
+          </Container>
+        </Box>
+        <Container sx={{ py: 8 }} maxWidth="md">
+          {/* End hero unit */}
+          <Grid container spacing={4}>
+            {cards.map((card) => (
+              <Grid item key={card} xs={12} sm={6} md={4}>
+                <Card
+                  sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
+                >
+                  <CardMedia
+                    component="img"
+                    sx={{
+                      // 16:9
+                      pt: '56.25%',
+                    }}
+                    image="https://source.unsplash.com/random"
+                    alt="random"
+                  />
+                  <CardContent sx={{ flexGrow: 1 }}>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      Heading
+                    </Typography>
+                    <Typography>
+                      This is a media card. You can use this section to describe the
+                      content.
+                    </Typography>
+                  </CardContent>
+                  <CardActions>
+                    <Button size="small">View</Button>
+                    <Button size="small">Edit</Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
+        </Container>
+      </main>
+      {/* Footer */}
+      <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
+        <Typography variant="h6" align="center" gutterBottom>
+          Footer
+        </Typography>
+        <Typography
+          variant="subtitle1"
+          align="center"
+          color="text.secondary"
+          component="p"
+        >
+          Something here to give the footer a purpose!
+        </Typography>
+        <Copyright />
+      </Box>
+      {/* End footer */}
+    </ThemeProvider>
+  );
+}
 
 
-export default function Projects() {
+
+function Projects() {
 	return (
                         <div class="flex">
+                                <Copyright />
                                 <ul>
                                         <li>
                                                 <Reverb />
@@ -39,64 +178,5 @@ export default function Projects() {
 	);
 }
 
-function ProjectsOld() {
 
-	return (
-
-<section class="bg-white dark:bg-gray-900">
-    <div class="container px-6 py-12 mx-auto">
-        <h1 class="text-3xl font-semibold text-gray-800 lg:text-4xl dark:text-white">Projects</h1>
-
-        <div class="mt-8 xl:mt-16 lg:flex lg:-mx-12">
-            <div class="lg:mx-12">
-                <h1 class="text-xl font-semibold text-gray-800 dark:text-white">Table of Content</h1>
-
-                <div class="mt-4 space-y-4 lg:mt-8">
-                    <a href="https://github.com/Robert812218/reverb-project" class="block text-blue-500 dark:text-blue-400 hover:underline">Reverb</a>
-                    <a href="https://github.com/Robert812218/Scheduler" class="block text-gray-500 dark:text-gray-300 hover:underline">Scheduler</a>
-                    <a href="https://github.com/Robert812218/LightBNB" class="block text-gray-500 dark:text-gray-300 hover:underline">LightBNB</a>
-                    <a href="https://github.com/Robert812218/big-brain-linux-machine" class="block text-gray-500 dark:text-gray-300 hover:underline">Vim/Linux Game</a>
-                    <a href="https://github.com/Robert812218/Tinyapp" class="block text-gray-500 dark:text-gray-300 hover:underline">Vim/Linux Game</a>
-                    <a href="https://github.com/Robert812218/snek-multiplayer" class="block text-gray-500 dark:text-gray-300 hover:underline">Snek Multiplayer</a>
-                    <a href="https://github.com/Robert812218/advent-of-code-2022" class="block text-gray-500 dark:text-gray-300 hover:underline">Advent of Code 2022</a>
-                    <a href="https://github.com/Robert812218/phoenix_messenger" class="block text-gray-500 dark:text-gray-300 hover:underline">Phoenix Messenger</a>
-                </div>
-            </div>
-
-            <div class="flex-1 mt-8 lg:mx-12 lg:mt-0">
-                <div class="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3 ">
-                    <div>
-                        <img class="object-cover w-full rounded-lg h-96 "
-                            src="https://images.unsplash.com/photo-1621111848501-8d3634f82336?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1565&q=80"
-                            alt=""></img>
-                        <h2 class="mt-4 text-2xl font-semibold text-gray-800 capitalize dark:text-white">Best website
-                            collections</h2>
-                        <p class="mt-2 text-lg tracking-wider text-blue-500 uppercase dark:text-blue-400 ">Website</p>
-                    </div>
-
-                    <div>
-                        <img class="object-cover w-full rounded-lg h-96 "
-                            src="https://images.unsplash.com/photo-1621609764180-2ca554a9d6f2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
-                            alt=""></img>
-                        <h2 class="mt-4 text-2xl font-semibold text-gray-800 capitalize dark:text-white">Block of Ui kit
-                            collections</h2>
-                        <p class="mt-2 text-lg tracking-wider text-blue-500 uppercase dark:text-blue-400 ">Ui kit</p>
-                    </div>
-
-                    <div>
-                        <img class="object-cover w-full rounded-lg h-96 "
-                            src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                            alt=""></img>
-                        <h2 class="mt-4 text-2xl font-semibold text-gray-800 capitalize dark:text-white">Project</h2>
-                        <p class="mt-2 text-lg tracking-wider text-blue-500 uppercase dark:text-blue-400 ">Mockups</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-	);
-
-}
 

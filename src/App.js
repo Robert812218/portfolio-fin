@@ -5,6 +5,11 @@ import Languages from './components/Languages';
 import Projects from './components/Projects';
 import ContactForm from './components/ContactForm';
 import Blog from './components/Blog';
+import { Typography } from '@mui/material';
+// import '@fontsource/roboto/300.css';
+// import '@fontsource/roboto/400.css';
+// import '@fontsource/roboto/500.css';
+// import '@fontsource/roboto/700.css';
 
 // ADD A BLOG PAGE 
 	// ADD BLOGS ABOUT LINUX AND WHATNOT
@@ -41,8 +46,6 @@ export default function AppOld() {
 		setProjects(!projects);
 	}, []);
 
-	function checkStates() {
-	}
 
 	function renderProfile() {
 		setProfile(!profile);
@@ -95,7 +98,7 @@ export default function AppOld() {
 
 				<nav class="bg-white shadow dark:bg-gray-800">
     					<div class="container flex items-center justify-center p-6 mx-auto text-gray-600 capitalize dark:text-gray-300">
-				
+						
 						<h1>ROBERT KELLY</h1>
 
         					<button onClick={renderProfile} class="text-gray-800 transition-colors duration-300 transform dark:text-gray-200 border-b-2 border-blue-500 mx-1.5 sm:mx-6">About Me</button>
