@@ -6,15 +6,15 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import Header from './BlogComponents/Header';
-import MainFeaturedPost from './BlogComponents/MainFeaturedPost';
-import FeaturedPost from './BlogComponents/FeaturedPost';
-import Main from './BlogComponents/Main';
-import Sidebar from './BlogComponents/Sidebar';
-import Footer from './BlogComponents/Footer';
-import post1 from './BlogComponents/blog-post.1.md';
-import post2 from './BlogComponents/blog-post.2.md';
-import post3 from './BlogComponents/blog-post.3.md';
+import Header from './blogComponents/Header';
+import MainFeaturedPost from './blogComponents/MainFeaturedPost';
+import FeaturedPost from './blogComponents/FeaturedPost';
+import Main from './blogComponents/Main';
+import Sidebar from './blogComponents/Sidebar';
+import Footer from './blogComponents/Footer';
+import post1 from './blogComponents/blog-post.1.md';
+import post2 from './blogComponents/blog-post.2.md';
+import post3 from './blogComponents/blog-post.3.md';
 
 const sections = [
     { title: 'Technology', url: '#' },

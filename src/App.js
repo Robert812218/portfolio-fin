@@ -5,11 +5,10 @@ import Languages from './components/Languages';
 import Projects from './components/Projects';
 import ContactForm from './components/ContactForm';
 import Blog from './components/Blog';
-import { Typography } from '@mui/material';
-// import '@fontsource/roboto/300.css';
-// import '@fontsource/roboto/400.css';
-// import '@fontsource/roboto/500.css';
-// import '@fontsource/roboto/700.css';
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
 
 // ADD A BLOG PAGE 
 	// ADD BLOGS ABOUT LINUX AND WHATNOT
@@ -23,17 +22,7 @@ import { Typography } from '@mui/material';
 // DO SOME FLUTTER/DART PROJECTS
 // ADD VIRTUAL MACHINES/KALI LINUX MAYBE
 
-function App() {
-	return (
-		<body class="overflow-hidden">
-			<div x-data="{ sidebarOpen: false }" class="relative flex h-screen text-gray-800 bg-white font-roboto">
-			</div>
-		</body>
-	);
-}
-
-
-export default function AppOld() {
+export default function App() {
 	const [active, setActive] = useState("");
 	const [profile, setProfile] = useState("");
 	const [languages, setLanguages] = useState("");
