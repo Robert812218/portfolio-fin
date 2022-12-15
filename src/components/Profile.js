@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 
 export default function Profile() {
 	
+	
 	return (
 		<div>
 			<h1>ROBERT KELLY</h1>

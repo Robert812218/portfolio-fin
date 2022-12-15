@@ -12,7 +12,7 @@ import LinuxDesc from './languageDescriptions/LinuxDesc';
 import GitDesc from './languageDescriptions/GitDesc';
 import Button from '@mui/material/Button';
 
-export default function Languages() {
+export default function LanguagesOld() {
 	const [clojure, setClojure] = useState("");		
 	const [elixir, setElixir] = useState("");		
 	const [cSharp, setCSharp] = useState("");		
