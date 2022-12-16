@@ -20,11 +20,10 @@ import theme from './components/ui/Theme';
 // ADD VIRTUAL MACHINES/KALI LINUX MAYBE
 
 export default function App() {
-	
+		
 	return (
 		<ThemeProvider theme={theme}>
 			<Header />
-			Hello!
 		</ThemeProvider>
 	)
 }
