@@ -5,8 +5,8 @@ import Languages from './components/Languages';
 import Projects from './components/Projects';
 import ContactForm from './components/ContactForm';
 import Blog from './components/Blog';
-import ThemeProvider from '@mui/material/styles';
-
+import { ThemeProvider } from '@mui/material/styles';
+import theme from './components/ui/Theme';
 // ADD A BLOG PAGE 
 	// ADD BLOGS ABOUT LINUX AND WHATNOT
 // ADD LINK TO GITHUB 
@@ -22,10 +22,10 @@ import ThemeProvider from '@mui/material/styles';
 export default function App() {
 	
 	return (
-		<div className="App">
+		<ThemeProvider theme={theme}>
 			<Header />
 			Hello!
-		</div>
+		</ThemeProvider>
 	)
 }
 
